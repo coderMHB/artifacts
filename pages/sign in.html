@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="../">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="./assets/css/fontiran.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/sign in.scss" />
+    <title>Artifacts | Sign in</title>
+  </head>
+  <body>
+    <!-- start loader -->
+    <div class="vertical-centered-box" style="transition: 0.5s" id="loader">
+      <div class="content">
+        <div
+          class="loader-circle d-flex justify-content-center align-items-center"
+        >
+          <img
+            src="./assets/img/20240626_030231 (1).png"
+            style="width: 120px; filter: contrast(0)"
+            alt="SEO"
+          />
+        </div>
+        <div class="loader-line-mask">
+          <div class="loader-line"></div>
+        </div>
+      </div>
+    </div>
+    <!-- end loader -->
+
+    <div id="cotainer-all-elements" style="display: none; transition: 2s">
+      <nav
+        class="navbar navbar-expand-md fixed-top d-flex align-items-center"
+        dir="rtl"
+        id="navbar"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"
+            ><img
+              src="./assets/img/20240626_030231 (1).png"
+              alt="SEO"
+              class="logo-header"
+            />
+            <span class="brand-name">آرتیفکس</span></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <i class="fa-solid fa-bars" style="color: #dedede"></i>
+            <!-- <span class="navbar-toggler-icon"></span> -->
+          </button>
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <a href="#">
+                <img
+                  src="./assets/img/20240626_030231 (1).png"
+                  alt="SEO"
+                  class="logo-header"
+                />
+              </a>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+              ></button>
+            </div>
+            <div class="offcanvas-body black-bg">
+              <ul
+                class="navbar-nav justify-content-center flex-grow-1 pe-3 text-white"
+              >
+                <div class="border-custom">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active text-white"
+                      aria-current="page"
+                      href="index.html"
+                      >خانه</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="sign in.html">ثبت نام</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about us.html">درباره ما</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="weblog.html">وبلاگ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="resume.html">رزومه</a>
+                  </li>
+                </div>
+              </ul>
+              <div class="icons d-flex flex-row">
+                <div class="box-icon" id="searchBtn">
+                  <i
+                    class="fa-solid fa-magnifying-glass pointer-event"
+                    style="color: #dedede"
+                  ></i>
+                </div>
+                <div class="box-icon" id="loginBtn">
+                  <i class="fa-regular fa-user" style="color: #dedede"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- modals -->
+      <!-- login box -->
+      <div class="my-modal-parent-login">
+        <div class="my-modal bg-black">
+          <span class="X" id="X-login">&times;</span>
+          <span class="text-center">حساب کاربری</span>
+          <hr style="color: #eee" />
+          <div class="d-flex flex-row justify-content-center w-100">
+            <button class="btn btn-outline-success w-50 m-1" type="button">
+              <a href="login.html" class="text-white text-decoration-none"
+                >ورود</a
+              >
+            </button>
+            <button class="btn btn-outline-primary w-50 m-1" type="button">
+              <a href="sign in.html" class="text-white text-decoration-none"
+                >ثبت نام</a
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- search box -->
+      <div class="my-modal-parent-search">
+        <div class="my-modal">
+          <form dir="rtl">
+            <div class="form-group text-center">
+              <label for="my-input">جستجو</label>
+              <input
+                id="my-input"
+                class="form-control"
+                type="text"
+                name=""
+                placeholder="جستجو کنید..."
+              />
+            </div>
+            <br />
+            <button class="btn btn-success w-100" type="submit" id="searchBtn">
+              جستجو
+            </button>
+          </form>
+          <span class="X" id="X-search">&times;</span>
+        </div>
+      </div>
+      <!-- end modal -->
+
+      <!-- start btn up -->
+      <button
+        class="btn btn-dark btn-up fixed-bottom d-flex justify-content-center align-items-center"
+        type="button"
+      >
+        <i class="fa-solid fa-caret-up" style="font-size: 22px"></i>
+      </button>
+      <!-- end btn up -->
+
+      <!-- begin form -->
+      <div class="container-fluid w-50 form-container p-sm-5 p-md-3 px-lg-5">
+        <div
+          class="form text-white w-100 mt-8 d-flex justify-content-center flex-column"
+          dir="rtl"
+        >
+          <div
+            class="my-logo w-100 d-flex justify-content-center align-items-center"
+          >
+            <img
+              src="./assets/img/20240626_030231 (1).png"
+              class="logo-img mt-0"
+              alt="SEO"
+            />
+            <span class="fc-logo-name">آرتیفکس</span>
+          </div>
+
+          <div class="form-group m-3">
+            <label for="my-input1">شماره تلفن</label>
+            <input id="my-input1" class="form-control" type="text" name="" />
+          </div>
+          <div class="form-group m-3">
+            <label for="my-input1">نام کاربری</label>
+            <input id="my-input1" class="form-control" type="text" name="" />
+          </div>
+          <div class="form-group m-3">
+            <label for="my-input1">ایمیل</label>
+            <input id="my-input1" class="form-control" type="text" name="" />
+          </div>
+          <div class="form-group m-3">
+            <label for="my-input1">رمز عبور</label>
+            <input id="my-input1" class="form-control" type="text" name="" />
+          </div>
+          <div class="form-check" dir="rtl">
+            <label for="my-input" class="form-check-label"
+              >قوانین را خوانده ام و موافقم</label
+            >
+            <input
+              id="my-input"
+              class="form-check-input right"
+              type="checkbox"
+              name=""
+              value="true"
+            />
+          </div>
+          <br />
+          <div class="w-100">
+            <button class="btn btn-success mt-2 w-100" type="submit">
+              ثبت نام
+            </button>
+          </div>
+          <br />
+          <div class="w-100 d-flex justify-content-center">
+            <span
+              >حساب کاربری دارید؟
+              <a class="text-white" href="login.html">ورود</a></span
+            >
+          </div>
+        </div>
+      </div>
+      <!-- end form -->
+
+      <!-- start footer -->
+      <footer>
+        <div class="container-fluid footer-card mt-4 bottom-0">
+          <div class="row">
+            <div class="col-12 col-md-3 text-center border-right">
+              <img src="./assets/img/enamad.png" alt="SEO" />
+              <img src="./assets/img/zarin_pal.png" alt="SEO" />
+              <img src="./assets/img/samandehi.png" alt="SEO" />
+            </div>
+            <div class="col-12 col-md-3 text-center border-right">
+              <button type="button" class="mb-2 mt-2 btn-footer">
+                آموزشگاه
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <ul class="links-footer">
+                <li class="list-group-item">
+                  <a href="" class="text-white mt-3 text-decoration-none"
+                    >کد ادیتور</a
+                  >
+                </li>
+                <li class="list-group-item">
+                  <a href="" class="text-white mt-3 text-decoration-none"
+                    >نقشه راه 1</a
+                  >
+                </li>
+                <li class="list-group-item">
+                  <a href="" class="text-white mt-3 text-decoration-none"
+                    >نقشه راه 2</a
+                  >
+                </li>
+                <li class="list-group-item">
+                  <a href="" class="text-white mt-3 text-decoration-none"
+                    >نقشه راه 3</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-12 col-md-3 text-center border-right">
+              <button type="button" class="mb-2 mt-2 btn-footer">
+                خدمات
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <ul class="links-footer">
+                <li class="list-group-item">
+                  <a href="" class="text-white mt-3 text-decoration-none"
+                    >تیم امنیت</a
+                  >
+                </li>
+                <li class="list-group-item">
+                  <a href="" class="text-white mt-3 text-decoration-none"
+                    >تیم وب</a
+                  >
+                </li>
+                <li class="list-group-item">
+                  <a href="" class="text-white mt-3 text-decoration-none"
+                    >تیم شبکه</a
+                  >
+                </li>
+                <li class="list-group-item">
+                  <a href="" class="text-white mt-3 text-decoration-none"
+                    >تیم محتوا</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-12 col-md-3 text-center border-right">
+              <button type="button" class="mb-2 mt-2 btn-footer">
+                نقشه راه
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <ul class="links-footer">
+                <li class="list-group-item">
+                  <a href="" class="text-white mt-3 text-decoration-none"
+                    >نقشه راه امنیت</a
+                  >
+                </li>
+                <li class="list-group-item">
+                  <a href="" class="text-white mt-3 text-decoration-none"
+                    >نقشه راه وب</a
+                  >
+                </li>
+                <li class="list-group-item">
+                  <a href="" class="text-white mt-3 text-decoration-none">
+                    نقشه راه شبکه</a
+                  >
+                </li>
+                <li class="list-group-item">
+                  <a href="" class="text-white mt-3 text-decoration-none"
+                    >نقشه راه کودک</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- end footer -->
+
+    <script src="./assets/js/bootstrap.js"></script>
+    <script src="./assets/js/header.js"></script>
+    <script src="./assets/js/footer.js"></script>
+    <script src="./assets/js/loader.js"></script>
+    <script src="./assets/js/btn up.js"></script>
+    <script
+      src="https://kit.fontawesome.com/9a5100e7b6.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

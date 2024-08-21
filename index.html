@@ -1,0 +1,944 @@
+<!-- coder: MHB -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="./assets/css/fontiran.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Artifacts | Home</title>
+  </head>
+  <body>
+    <!-- start loader -->
+    <div class="vertical-centered-box" style="transition: 0.5s" id="loader">
+      <div class="content">
+        <div
+          class="loader-circle d-flex justify-content-center align-items-center"
+        >
+          <img
+            src="./assets/img/20240626_030231 (1).png"
+            style="width: 120px; filter: contrast(0)"
+            alt="SEO"
+          />
+        </div>
+        <div class="loader-line-mask">
+          <div class="loader-line"></div>
+        </div>
+      </div>
+    </div>
+    <!-- end loader -->
+
+    <div id="cotainer-all-elements" style="display: none; transition: 2s">
+      <nav
+        class="navbar navbar-expand-md fixed-top d-flex align-items-center"
+        dir="rtl"
+        id="navbar"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"
+            ><img
+              src="./assets/img/20240626_030231 (1).png"
+              alt="SEO"
+              class="logo-header"
+            />
+            <span class="brand-name">آرتیفکس</span></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <i class="fa-solid fa-bars" style="color: #dedede"></i>
+            <!-- <span class="navbar-toggler-icon"></span> -->
+          </button>
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <a href="#">
+                <img
+                  src="./assets/img/20240626_030231 (1).png"
+                  alt="SEO"
+                  class="logo-header"
+                />
+              </a>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+              ></button>
+            </div>
+            <div class="offcanvas-body black-bg">
+              <ul
+                class="navbar-nav justify-content-center flex-grow-1 pe-3 text-white"
+              >
+                <div class="border-custom">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active text-white"
+                      aria-current="page"
+                      href="index.html"
+                      >خانه</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/sign in.html">ثبت نام</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/about us.html">درباره ما</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/weblog.html">وبلاگ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/resume.html">رزومه</a>
+                  </li>
+                </div>
+              </ul>
+              <div class="icons d-flex flex-row">
+                <div class="box-icon" id="searchBtn">
+                  <i
+                    class="fa-solid fa-magnifying-glass pointer-event"
+                    style="color: #dedede"
+                  ></i>
+                </div>
+                <div class="box-icon" id="loginBtn">
+                  <i class="fa-regular fa-user" style="color: #dedede"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- modals -->
+      <!-- login box -->
+      <div class="my-modal-parent-login">
+        <div class="my-modal bg-black">
+          <span class="X" id="X-login">&times;</span>
+          <span class="text-center">حساب کاربری</span>
+          <hr style="color: #eee" />
+          <div class="d-flex flex-row justify-content-center w-100">
+            <button class="btn btn-outline-success w-50 m-1" type="button">
+              <a href="./pages/login.html" class="text-white text-decoration-none"
+                >ورود</a
+              >
+            </button>
+            <button class="btn btn-outline-primary w-50 m-1" type="button">
+              <a href="./pages/sign in.html" class="text-white text-decoration-none"
+                >ثبت نام</a
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- search box -->
+      <div class="my-modal-parent-search">
+        <div class="my-modal">
+          <form dir="rtl">
+            <div class="form-group text-center">
+              <label for="my-input">جستجو</label>
+              <input
+                id="my-input"
+                class="form-control"
+                type="text"
+                name=""
+                placeholder="جستجو کنید..."
+              />
+            </div>
+            <br />
+            <button class="btn btn-success w-100" type="submit" id="searchBtn">
+              جستجو
+            </button>
+          </form>
+          <span class="X" id="X-search">&times;</span>
+        </div>
+      </div>
+      <!-- end modal -->
+
+      <!-- start btn up -->
+      <button
+        class="btn btn-dark btn-up fixed-bottom d-flex justify-content-center align-items-center"
+        type="button"
+      >
+        <i class="fa-solid fa-caret-up" style="font-size: 22px"></i>
+      </button>
+      <!-- end btn up -->
+
+      <!-- bigin body site -->
+      <div class="header-bg mt-8">
+        <h1 class="brand-name text-white title-index">
+          آرتیفکس یعنی حقیقت هنر
+        </h1>
+      </div>
+      <div class="container-fluid w-100 mt-8">
+        <br />
+        <h3 class="text-center text-white brand-name mb-3">
+          ...از آرتیفکس برات بگم
+        </h3>
+        <hr class="m-auto" style="color: #eee; width: 90%" />
+        <p
+          dir="rtl"
+          class="text-white-50 mt-4 mb-2 p-3"
+          style="text-align: justify; line-height: 2"
+        >
+          آرتیفکس یک گروه طراحی وب و طراحی پوستر است که تلاش می کند سایت ها و
+          پوستر های شما را بهبود بخشد
+          <span class="txt-additional" id="txt-additional">
+            متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و
+            سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا
+            با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص
+            طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد در این صورت می
+            توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت
+            تایپ به استفاده قرار گیرد. و جوابگوی سوالات پیوسته اهل دنیای موجود
+            طراحی اساسا مورد استفاده قرار گیرد. و جوابگوی سوالات پیوسته اهل
+            دنیای موجود طراحی اساسا مورد استفاده قرار گیرد. و جوابگوی سوالات
+            پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</span
+          >
+        </p>
+        <div class="w-100 d-flex justify-content-center mt-0">
+          <button
+            class="btn btn-light btn-additiponal"
+            type="button"
+            style="
+              background: linear-gradient(
+                  180deg,
+                  rgba(255, 255, 255, 0) 17.71%,
+                  rgba(255, 255, 255, 0.12) 100%
+                ),
+                rgba(255, 255, 255, 0.01) !important;
+              color: white;
+              border: none;
+              backdrop-filter: blur(12px);
+            "
+            id="btn-additional"
+          >
+            نمایش بیشتر
+          </button>
+        </div>
+        <h2 class="mt-12 brand-name text-center" style="color: #ffffffbc">
+          :مسیر های یاد گیری
+        </h2>
+        <hr class="m-auto" style="color: #eee; width: 93%" />
+        <div class="parent-hack-article w-100">
+          <div class="w-100 d-flex justify-content-end p-3">
+            <h3
+              class="d-inline-block m-1 brand-name text-white mt-2 fc-logo-name"
+            >
+              نقشه راه هک و امنیت
+            </h3>
+            <div class="parent-icon-title-article m-2 mt-0 mb-0">
+              <i
+                class="fa-solid fa-lock"
+                style="color: white; font-size: 25px"
+              ></i>
+            </div>
+          </div>
+          <div class="row m-2 m-sm-3 mb-1 mt-1">
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="article">
+                <img
+                  src="./assets/img/بارگیری.jpg"
+                  class="w-100 border-r-img-blog"
+                  alt="SEO"
+                />
+                <p class="brand-name text-center">چیست؟ Js</p>
+                <p class="text-white-50 text-center m-1 mb-3 fs-7">
+                  این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله
+                  است
+                </p>
+                <hr
+                  class="m-auto mb-2"
+                  style="color: rgb(148, 148, 148); width: 90%"
+                />
+                <div
+                  class="d-flex justify-content-around align-items-center mb-3"
+                >
+                  <span class="text-white">1399/10/06</span
+                  ><button class="btn btn-dark text-white" type="button">
+                    ادامه مطلب
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="article">
+                <img
+                  src="./assets/img/بارگیری.jpg"
+                  class="w-100 border-r-img-blog"
+                  alt="SEO"
+                />
+                <p class="brand-name text-center">چیست؟ Js</p>
+                <p class="text-white-50 text-center m-1 mb-3 fs-7">
+                  این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله
+                  است
+                </p>
+                <hr
+                  class="m-auto mb-2"
+                  style="color: rgb(148, 148, 148); width: 90%"
+                />
+                <div
+                  class="d-flex justify-content-around align-items-center mb-3"
+                >
+                  <span class="text-white">1399/10/06</span
+                  ><button class="btn btn-dark text-white" type="button">
+                    ادامه مطلب
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="article">
+                <img
+                  src="./assets/img/بارگیری.jpg"
+                  class="w-100 border-r-img-blog"
+                  alt="SEO"
+                />
+                <p class="brand-name text-center">چیست؟ Js</p>
+                <p class="text-white-50 text-center m-1 mb-3 fs-7">
+                  این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله
+                  است
+                </p>
+                <hr
+                  class="m-auto mb-2"
+                  style="color: rgb(148, 148, 148); width: 90%"
+                />
+                <div
+                  class="d-flex justify-content-around align-items-center mb-3"
+                >
+                  <span class="text-white">1399/10/06</span
+                  ><button class="btn btn-dark text-white" type="button">
+                    ادامه مطلب
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="article">
+                <img
+                  src="./assets/img/بارگیری.jpg"
+                  class="w-100 border-r-img-blog"
+                  alt="SEO"
+                />
+                <p class="brand-name text-center">چیست؟ Js</p>
+                <p class="text-white-50 text-center m-1 mb-3 fs-7">
+                  این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله
+                  است
+                </p>
+                <hr
+                  class="m-auto mb-2"
+                  style="color: rgb(148, 148, 148); width: 90%"
+                />
+                <div
+                  class="d-flex justify-content-around align-items-center mb-3"
+                >
+                  <span class="text-white">1399/10/06</span
+                  ><button class="btn btn-dark text-white" type="button">
+                    ادامه مطلب
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-100 d-flex justify-content-center mb-5 mb-md-0">
+            <a href="#">
+              <button class="btn btn-hack" style="color: white" type="button">
+                نمایش بیشتر مقالات
+              </button>
+            </a>
+          </div>
+        </div>
+        <div class="parent-web-article">
+          <div class="w-100 d-flex justify-content-end p-3">
+            <h3
+              class="d-inline-block m-1 brand-name text-white mt-2 fc-logo-name"
+            >
+              نقشه راه طراحی وب
+            </h3>
+            <div class="parent-icon-title-web-article m-2 mt-0 mb-0">
+              <i
+                class="fa-solid fa-globe"
+                style="color: white; font-size: 30px"
+              ></i>
+            </div>
+          </div>
+          <div class="row m-2 m-sm-3 mb-1 mt-1">
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="article">
+                <img
+                  src="./assets/img/بارگیری.jpg"
+                  class="w-100 border-r-img-blog"
+                  alt="SEO"
+                />
+                <p class="brand-name text-center">چیست؟ Js</p>
+                <p class="text-white-50 text-center m-1 mb-3 fs-7">
+                  این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله
+                  است
+                </p>
+                <hr
+                  class="m-auto mb-2"
+                  style="color: rgb(148, 148, 148); width: 90%"
+                />
+                <div
+                  class="d-flex justify-content-around align-items-center mb-3"
+                >
+                  <span class="text-white">1399/10/06</span
+                  ><button class="btn btn-dark text-white" type="button">
+                    ادامه مطلب
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="article">
+                <img
+                  src="./assets/img/بارگیری.jpg"
+                  class="w-100 border-r-img-blog"
+                  alt="SEO"
+                />
+                <p class="brand-name text-center">چیست؟ Js</p>
+                <p class="text-white-50 text-center m-1 mb-3 fs-7">
+                  این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله
+                  است
+                </p>
+                <hr
+                  class="m-auto mb-2"
+                  style="color: rgb(148, 148, 148); width: 90%"
+                />
+                <div
+                  class="d-flex justify-content-around align-items-center mb-3"
+                >
+                  <span class="text-white">1399/10/06</span
+                  ><button class="btn btn-dark text-white" type="button">
+                    ادامه مطلب
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="article">
+                <img
+                  src="./assets/img/بارگیری.jpg"
+                  class="w-100 border-r-img-blog"
+                  alt="SEO"
+                />
+                <p class="brand-name text-center">چیست؟ Js</p>
+                <p class="text-white-50 text-center m-1 mb-3 fs-7">
+                  این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله
+                  است
+                </p>
+                <hr
+                  class="m-auto mb-2"
+                  style="color: rgb(148, 148, 148); width: 90%"
+                />
+                <div
+                  class="d-flex justify-content-around align-items-center mb-3"
+                >
+                  <span class="text-white">1399/10/06</span
+                  ><button class="btn btn-dark text-white" type="button">
+                    ادامه مطلب
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="article">
+                <img
+                  src="./assets/img/بارگیری.jpg"
+                  class="w-100 border-r-img-blog"
+                  alt="SEO"
+                />
+                <p class="brand-name text-center">چیست؟ Js</p>
+                <p class="text-white-50 text-center m-1 mb-3 fs-7">
+                  این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله
+                  است
+                </p>
+                <hr
+                  class="m-auto mb-2"
+                  style="color: rgb(148, 148, 148); width: 90%"
+                />
+                <div
+                  class="d-flex justify-content-around align-items-center mb-3"
+                >
+                  <span class="text-white">1399/10/06</span
+                  ><button class="btn btn-dark text-white" type="button">
+                    ادامه مطلب
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-100 d-flex justify-content-center mb-5 mb-md-0">
+            <a href="#">
+              <button class="btn btn-web" style="color: white" type="button">
+                نمایش بیشتر مقالات
+              </button>
+            </a>
+          </div>
+        </div>
+        <div class="parent-web-article">
+          <div class="w-100 d-flex justify-content-end p-3">
+            <h3
+              class="d-inline-block m-1 brand-name text-white mt-2 fc-logo-name"
+            >
+              نقشه راه شبکه
+            </h3>
+            <div class="parent-icon-title-server-article m-2 mt-0 mb-0">
+              <i
+                class="fa-solid fa-globe"
+                style="color: white; font-size: 30px"
+              ></i>
+            </div>
+          </div>
+          <div class="row m-2 m-sm-3 mb-1 mt-1">
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="article">
+                <img
+                  src="./assets/img/بارگیری.jpg "
+                  class="w-100 border-r-img-blog"
+                  alt="SEO"
+                />
+                <p class="brand-name text-center">چیست؟ Js</p>
+                <p class="text-white-50 text-center m-1 mb-3 fs-7">
+                  این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله
+                  است
+                </p>
+                <hr
+                  class="m-auto mb-2"
+                  style="color: rgb(148, 148, 148); width: 90%"
+                />
+                <div
+                  class="d-flex justify-content-around align-items-center mb-3"
+                >
+                  <span class="text-white">1399/10/06</span
+                  ><button class="btn btn-dark text-white" type="button">
+                    ادامه مطلب
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="article">
+                <img
+                  src="./assets/img/بارگیری.jpg"
+                  class="w-100 border-r-img-blog"
+                  alt="SEO"
+                />
+                <p class="brand-name text-center">چیست؟ Js</p>
+                <p class="text-white-50 text-center m-1 mb-3 fs-7">
+                  این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله
+                  است
+                </p>
+                <hr
+                  class="m-auto mb-2"
+                  style="color: rgb(148, 148, 148); width: 90%"
+                />
+                <div
+                  class="d-flex justify-content-around align-items-center mb-3"
+                >
+                  <span class="text-white">1399/10/06</span>
+                  <button class="btn btn-dark text-white" type="button">
+                    ادامه مطلب
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="article">
+                <img
+                  src="./assets/img/بارگیری.jpg"
+                  class="w-100 border-r-img-blog"
+                  alt="SEO"
+                />
+                <p class="brand-name text-center">چیست؟ Js</p>
+                <p class="text-white-50 text-center m-1 mb-3 fs-7">
+                  این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله
+                  است
+                </p>
+                <hr
+                  class="m-auto mb-2"
+                  style="color: rgb(148, 148, 148); width: 90%"
+                />
+                <div
+                  class="d-flex justify-content-around align-items-center mb-3"
+                >
+                  <span class="text-white">1399/10/06</span
+                  ><button class="btn btn-dark text-white" type="button">
+                    ادامه مطلب
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="article">
+                <img
+                  src="./assets/img/بارگیری.jpg"
+                  class="w-100 border-r-img-blog"
+                  alt="SEO"
+                />
+                <p class="brand-name text-center">چیست؟ Js</p>
+                <p class="text-white-50 text-center m-1 mb-3 fs-7">
+                  این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله
+                  است
+                </p>
+                <hr
+                  class="m-auto mb-2"
+                  style="color: rgb(148, 148, 148); width: 90%"
+                />
+                <div
+                  class="d-flex justify-content-around align-items-center mb-3"
+                >
+                  <span class="text-white">1399/10/06</span
+                  ><button class="btn btn-dark text-white" type="button">
+                    ادامه مطلب
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-100 d-flex justify-content-center mb-5 mb-md-0">
+            <a href="#">
+              <button class="btn btn-server" type="button" style="color: white">
+                نمایش بیشتر مقالات
+              </button>
+            </a>
+          </div>
+        </div>
+        <div class="parent-web-article">
+          <div class="w-100 d-flex justify-content-end p-3">
+            <h3
+              class="d-inline-block m-1 brand-name text-white mt-2 fc-logo-name"
+            >
+              نقشه راه کودک
+            </h3>
+            <div class="parent-icon-title-graduation-article m-2 mt-0 mb-0">
+              <i
+                class="fa-solid fa-graduation-cap"
+                style="color: white; font-size: 30px"
+              ></i>
+            </div>
+          </div>
+          <div class="row m-2 m-sm-3 mb-1 mt-1">
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="article">
+                <img
+                  src="./assets/img/بارگیری.jpg"
+                  class="w-100 border-r-img-blog"
+                  alt="SEO"
+                />
+                <p class="brand-name text-center">چیست؟ Js</p>
+                <p class="text-white-50 text-center m-1 mb-3 fs-7">
+                  این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله
+                  است
+                </p>
+                <hr
+                  class="m-auto mb-2"
+                  style="color: rgb(148, 148, 148); width: 90%"
+                />
+                <div
+                  class="d-flex justify-content-around align-items-center mb-3"
+                >
+                  <span class="text-white">1399/10/06</span
+                  ><button class="btn btn-dark text-white" type="button">
+                    ادامه مطلب
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="article">
+                <img
+                  src="./assets/img/بارگیری.jpg"
+                  class="w-100 border-r-img-blog"
+                  alt="SEO"
+                />
+                <p class="brand-name text-center">چیست؟ Js</p>
+                <p class="text-white-50 text-center m-1 mb-3 fs-7">
+                  این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله
+                  است
+                </p>
+                <hr
+                  class="m-auto mb-2"
+                  style="color: rgb(148, 148, 148); width: 90%"
+                />
+                <div
+                  class="d-flex justify-content-around align-items-center mb-3"
+                >
+                  <span class="text-white">1399/10/06</span
+                  ><button class="btn btn-dark text-white" type="button">
+                    ادامه مطلب
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="article">
+                <img
+                  src="./assets/img/بارگیری.jpg"
+                  class="w-100 border-r-img-blog"
+                  alt="SEO"
+                />
+                <p class="brand-name text-center">چیست؟ Js</p>
+                <p class="text-white-50 text-center m-1 mb-3 fs-7">
+                  این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله
+                  است
+                </p>
+                <hr
+                  class="m-auto mb-2"
+                  style="color: rgb(148, 148, 148); width: 90%"
+                />
+                <div
+                  class="d-flex justify-content-around align-items-center mb-3"
+                >
+                  <span class="text-white">1399/10/06</span
+                  ><button class="btn btn-dark text-white" type="button">
+                    ادامه مطلب
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="article">
+                <img
+                  src="./assets/img/بارگیری.jpg"
+                  class="w-100 border-r-img-blog"
+                  alt="SEO"
+                />
+                <p class="brand-name text-center">چیست؟ Js</p>
+                <p class="text-white-50 text-center m-1 mb-3 fs-7">
+                  این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله
+                  است
+                </p>
+                <hr
+                  class="m-auto mb-2"
+                  style="color: rgb(148, 148, 148); width: 90%"
+                />
+                <div
+                  class="d-flex justify-content-around align-items-center mb-3"
+                >
+                  <span class="text-white">1399/10/06</span
+                  ><button class="btn btn-dark text-white" type="button">
+                    ادامه مطلب
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-100 d-flex justify-content-center mb-5 mb-md-0">
+            <a href="#">
+              <button class="btn btn-baby" style="color: white" type="button">
+                نمایش بیشتر مقالات
+              </button>
+            </a>
+          </div>
+          <div class="w-100 d-flex justify-content-end mt-5 text-white">
+            <h3 class="fc-logo-name d-flex p-3 pb-2">
+              درباره آرتیفکس
+              <i
+                class="fa-solid fa-circle-exclamation m-2 mt-1"
+                style="width: 20px"
+              ></i>
+            </h3>
+          </div>
+          <p
+            dir="rtl"
+            class="text-white-50 mt-0 mb-2 p-3"
+            style="text-align: justify; line-height: 2"
+          >
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+            استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+            کاربردهای
+            <span class="txt-additional" id="txt-additional2">
+              متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و
+              سه درصد گذشته حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد
+              تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص
+              طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد در این صورت می
+              توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط
+              سخت تایپ به استفاده قرار گیرد. و جوابگوی سوالات پیوسته اهل دنیای
+              موجود طراحی اساسا مورد استفاده قرار گیرد. و جوابگوی سوالات پیوسته
+              اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد. و جوابگوی
+              سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار
+              گیرد.</span
+            >
+          </p>
+          <div class="w-100 d-flex justify-content-center mt-0">
+            <button
+              class="btn btn-light btn-additiponal"
+              type="button"
+              style="
+                background: linear-gradient(
+                    180deg,
+                    rgba(255, 255, 255, 0) 17.71%,
+                    rgba(255, 255, 255, 0.12) 100%
+                  ),
+                  rgba(255, 255, 255, 0.01) !important;
+                color: white;
+                border: none;
+                backdrop-filter: blur(12px);
+              "
+              id="btn-additional2"
+            >
+              نمایش بیشتر
+            </button>
+          </div>
+          <div
+            class="d-flex align-items-center justify-content-between mt-4 p-4 pt-3 pb-3 w-100"
+            style="
+              border-top: 1px solid gray;
+              border-bottom: 1px solid gray;
+              background: rgba(255, 255, 255, 0.02);
+              box-sizing: border-box;
+            "
+          >
+            <div class="icons-me d-flex align-items-center">
+              <div class="instagram-icon">
+                <a href="#">
+                  <i
+                    class="fa-brands fa-instagram"
+                    style="color: #ffffff7f; font-size: 45px"
+                  ></i>
+                </a>
+              </div>
+              <div
+                class="eita-icon"
+                style="filter: contrast(0); margin-left: 10px"
+              >
+                <a href="#">
+                  <img
+                    src="./assets/img/eitaa.svg"
+                    alt="SEO"
+                    style="width: 40px"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="text-icon text-white">
+              :ما رو میتونی اینجاها پیدا کنی
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end body site -->
+
+      <!-- start footer -->
+      <footer>
+        <div class="container-fluid footer-card mt-4 bottom-0">
+          <div class="row">
+            <div class="col-12 col-md-3 text-center border-right">
+              <img src="./assets/img/enamad.png" alt="SEO" />
+              <img src="./assets/img/zarin_pal.png" alt="SEO" />
+              <img src="./assets/img/samandehi.png" alt="SEO" />
+            </div>
+            <div class="col-12 col-md-3 text-center border-right">
+              <button type="button" class="mb-2 mt-2 btn-footer">
+                آموزشگاه
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <ul class="links-footer">
+                <li class="list-group-item">
+                  <a href="" class="text-white mt-3 text-decoration-none"
+                    >کد ادیتور</a
+                  >
+                </li>
+                <li class="list-group-item">
+                  <a href="" class="text-white mt-3 text-decoration-none"
+                    >نقشه راه 1</a
+                  >
+                </li>
+                <li class="list-group-item">
+                  <a href="" class="text-white mt-3 text-decoration-none"
+                    >نقشه راه 2</a
+                  >
+                </li>
+                <li class="list-group-item">
+                  <a href="" class="text-white mt-3 text-decoration-none"
+                    >نقشه راه 3</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-12 col-md-3 text-center border-right">
+              <button type="button" class="mb-2 mt-2 btn-footer">
+                خدمات
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <ul class="links-footer">
+                <li class="list-group-item">
+                  <a href="" class="text-white mt-3 text-decoration-none"
+                    >تیم امنیت</a
+                  >
+                </li>
+                <li class="list-group-item">
+                  <a href="" class="text-white mt-3 text-decoration-none"
+                    >تیم وب</a
+                  >
+                </li>
+                <li class="list-group-item">
+                  <a href="" class="text-white mt-3 text-decoration-none"
+                    >تیم شبکه</a
+                  >
+                </li>
+                <li class="list-group-item">
+                  <a href="" class="text-white mt-3 text-decoration-none"
+                    >تیم محتوا</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-12 col-md-3 text-center border-right">
+              <button type="menu" class="mb-2 mt-2 btn-footer">
+                نقشه راه
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <ul class="links-footer">
+                <li class="list-group-item">
+                  <a href="" class="text-white mt-3 text-decoration-none"
+                    >نقشه راه امنیت</a
+                  >
+                </li>
+                <li class="list-group-item">
+                  <a href="" class="text-white mt-3 text-decoration-none"
+                    >نقشه راه وب</a
+                  >
+                </li>
+                <li class="list-group-item">
+                  <a href="" class="text-white mt-3 text-decoration-none">
+                    نقشه راه شبکه</a
+                  >
+                </li>
+                <li class="list-group-item">
+                  <a href="" class="text-white mt-3 text-decoration-none"
+                    >نقشه راه کودک</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- end footer -->
+    </div>
+
+    <script src="./assets/js/bootstrap.js"></script>
+    <script src="./assets/js/header.js"></script>
+    <script src="./assets/js/footer.js"></script>
+    <script src="./assets/js/loader.js"></script>
+    <script src="./assets/js/base.js"></script>
+    <script src="./assets/js/btn up.js"></script>
+    <script
+      src="https://kit.fontawesome.com/9a5100e7b6.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

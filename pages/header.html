@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="../">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="./assets/css/fontiran.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Artifacts</title>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-md fixed-top d-flex align-items-center"
+      dir="rtl"
+      id="navbar"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><img
+            src="./assets/img/20240626_030231 (1).png"
+            alt="SEO"
+            class="logo-header"
+          />
+          <span class="brand-name">آرتیفکس</span></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars" style="color: #dedede"></i>
+          <!-- <span class="navbar-toggler-icon"></span> -->
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <a href="#">
+              <img
+                src="./assets/img/20240626_030231 (1).png"
+                alt="SEO"
+                class="logo-header"
+              />
+            </a>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              style="color: white"
+            ></button>
+          </div>
+          <div class="offcanvas-body black-bg">
+            <ul
+              class="navbar-nav justify-content-center flex-grow-1 pe-3 text-white"
+            >
+              <div class="border-custom">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-white"
+                    aria-current="page"
+                    href="#"
+                    >خانه</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">ثبت نام</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">محصولات</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">درباره ما</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">وبلاگ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">رزومه</a>
+                </li>
+              </div>
+            </ul>
+            <div class="icons d-flex flex-row">
+              <div class="box-icon" id="searchBtn">
+                <i
+                  class="fa-solid fa-magnifying-glass pointer-event"
+                  style="color: #dedede"
+                ></i>
+              </div>
+              <div class="box-icon" id="loginBtn">
+                <i class="fa-regular fa-user" style="color: #dedede"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+
+    <!-- modals -->
+    <!-- login box -->
+    <div class="my-modal-parent-login">
+      <div class="my-modal bg-black">
+        <span class="X" id="X-login">&times;</span>
+        <span class="text-center">حساب کاربری</span>
+        <hr style="color: #eee" />
+        <div class="d-flex flex-row justify-content-center w-100">
+          <button class="btn btn-outline-success w-50 m-1" type="button">
+            ورود
+          </button>
+          <button class="btn btn-outline-primary w-50 m-1" type="button">
+            ثبت نام
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- search box -->
+    <div class="my-modal-parent-search">
+      <div class="my-modal">
+        <form dir="rtl">
+          <div class="form-group text-center">
+            <label for="my-input">جستجو</label>
+            <input
+              id="my-input"
+              class="form-control"
+              type="text"
+              name=""
+              placeholder="جستجو کنید..."
+            />
+          </div>
+          <br />
+          <button class="btn btn-success w-100" type="submit" id="searchBtn">
+            جستجو
+          </button>
+        </form>
+        <span class="X" id="X-search">&times;</span>
+      </div>
+    </div>
+    <!-- end modal -->
+
+    <script src="./assets/js/bootstrap.js"></script>
+    <script src="./assets/js/header.js"></script>
+    <script src="./assets/js/base.js"></script>
+    <script
+      src="https://kit.fontawesome.com/9a5100e7b6.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
