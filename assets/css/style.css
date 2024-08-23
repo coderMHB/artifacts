@@ -115,7 +115,7 @@ body {
   border-bottom: 1px solid #12699fca;
 }
 
-#loginBtn{
+#loginBtn {
   margin-left: 20px;
 }
 
@@ -554,12 +554,6 @@ path {
   }
 }
 
-
-
-
-
-
-
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
@@ -581,15 +575,50 @@ path {
   transform: scale(1.05);
 }
 
-
-
-
-
-
-
-
-
 /* end resume */
+
+.neon-box {
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 8px;
+  font-family: moraba;
+}
+.neon-red {
+  background-color: #ff073a;
+  box-shadow: 0px 0px 12px 0px #ff073a;
+}
+.neon-green {
+  background-color: #4cffa1;
+  box-shadow: 0px 0px 12px 0px #4cffa1;
+}
+.neon-blue {
+  background-color: #4c8cff;
+}
+.neon-orange {
+  background-color: #ff9c4c;
+}
+
+@media (max-width: 768px) {
+  .neon-box {
+    margin-bottom: 15px;
+  }
+  .neon-box {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 1090px) {
+  .neon-box {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 870px) {
+  .neon-box{
+    font-size: 0.9rem;
+  }
+}
 
 /* ___________________________start index______________________________ */
 /* start header background */
@@ -658,8 +687,8 @@ path {
 .btn-server {
   background: linear-gradient(180deg, rgb(0 0 0 / 0%) 17.71%, #146da5 100%),
     rgba(255, 0, 0, 0.02) !important;
-    border: none;
-  }
+  border: none;
+}
 .btn-web {
   background: linear-gradient(180deg, rgb(0 0 0 / 0%) 17.71%, #33ad57 100%),
     rgba(255, 0, 0, 0.02) !important;
@@ -675,9 +704,9 @@ path {
     background: radial-gradient(#000000ac, #00000019),
       linear-gradient(to bottom, #00000000 80%, #000000),
       url(../img/mobile-bg.jpg);
-    }
-    .txt-additional {
-      display: none;
+  }
+  .txt-additional {
+    display: none;
   }
   .btn-additiponal {
     display: block;
