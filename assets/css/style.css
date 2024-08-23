@@ -596,9 +596,11 @@ path {
 }
 .neon-blue {
   background-color: #146da5;
+    box-shadow: 0px 0px 12px 0px #4c8cff;
 }
 .neon-orange {
   background-color: #ff8b00;
+    box-shadow: 0px 0px 12px 0px #ff9c4c;
 }
 
 @media (max-width: 768px) {
