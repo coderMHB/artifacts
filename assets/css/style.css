@@ -299,6 +299,15 @@ ul {
   box-shadow: none;
   color: white;
 }
+input[type="number"] {
+  -moz-appearance: textfield; /* برای فایرفاکس */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* برای کروم و سافاری */
+  margin: 0; /* حذف حاشیه */
+}
 @media (max-width: 768px) {
   .form-container {
     width: 100% !important;
