@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artifacts | article</title>
+  </head>
+  <body>
+    <div id="article-content"></div>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const articleIndex = urlParams.get("articleIndex");
+
+      // چاپ مقدار articleIndex برای دیباگ
+      console.log("articleIndex:", articleIndex);
+
+      const articlesData = [
+        {
+          title: "چیست؟ Js1",
+          txt: "این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله است",
+          text: "این کل متن مقاله است",
+          img: "../assets/img/بارگیری.jpg",
+          time: "1399/10/06",
+        },
+        {
+          title: "چیست؟ Js2",
+          txt: "این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله است",
+          text: "این کل متن مقاله است",
+          img: "../assets/img/بارگیری.jpg",
+          time: "1399/10/06",
+        },
+        {
+          title: "چیست؟ Js3",
+          txt: "این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله است",
+          text: "این کل متن مقاله است",
+          img: "../assets/img/بارگیری.jpg",
+          time: "1399/10/06",
+        },
+        {
+          title: "چیست؟ Js4",
+          txt: "این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله است",
+          text: "این کل متن مقاله است",
+          img: "../assets/img/بارگیری.jpg",
+          time: "1399/10/06",
+        },
+        {
+          title: "چیست؟ Js5",
+          txt: "این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله است",
+          text: "این کل متن مقاله است",
+          img: "../assets/img/بارگیری.jpg",
+          time: "1399/10/06",
+        },
+        {
+          title: "چیست؟ Js6",
+          txt: "این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله است",
+          text: "این کل متن مقاله است",
+          img: "../assets/img/بارگیری.jpg",
+          time: "1399/10/06",
+        },
+        {
+          title: "چیست؟ Js7",
+          txt: "این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله است",
+          text: "این کل متن مقاله است",
+          img: "../assets/img/بارگیری.jpg",
+          time: "1399/10/06",
+        },
+        {
+          title: "چیست؟ Js8",
+          txt: "این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله است",
+          text: "این کل متن مقاله است",
+          img: "../assets/img/بارگیری.jpg",
+          time: "1399/10/06",
+        },
+        {
+          title: "چیست؟ Js9",
+          txt: "این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله است",
+          text: "این کل متن مقاله است",
+          img: "../assets/img/بارگیری.jpg",
+          time: "1399/10/06",
+        },
+        {
+          title: "چیست؟ Js10",
+          txt: "این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله است",
+          text: "این کل متن مقاله است",
+          img: "../assets/img/بارگیری.jpg",
+          time: "1399/10/06",
+        },
+        {
+          title: "چیست؟ Js11",
+          txt: "این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله است",
+          text: "این کل متن مقاله است",
+          img: "../assets/img/بارگیری.jpg",
+          time: "1399/10/06",
+        },
+        {
+          title: "چیست؟ Js12",
+          txt: "این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله است",
+          text: "این کل متن مقاله است",
+          img: "../assets/img/بارگیری.jpg",
+          time: "1399/10/06",
+        },
+        {
+          title: "چیست؟ Js13",
+          txt: "این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله است",
+          text: "این کل متن مقاله است",
+          img: "../assets/img/بارگیری.jpg",
+          time: "1399/10/06",
+        },
+        {
+          title: "چیست؟ Js14",
+          txt: "این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله است",
+          text: "این کل متن مقاله است",
+          img: "../assets/img/بارگیری.jpg",
+          time: "1399/10/06",
+        },
+        {
+          title: "چیست؟ Js15",
+          txt: "این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله است",
+          text: "این کل متن مقاله است",
+          img: "../assets/img/بارگیری.jpg",
+          time: "1399/10/06",
+        },
+      ];
+
+      // بررسی اینکه آیا articleIndex یک عدد معتبر است
+      if (
+        articleIndex !== null &&
+        !isNaN(articleIndex) &&
+        articleIndex >= 0 &&
+        articleIndex < articlesData.length
+      ) {
+        const article = articlesData[articleIndex];
+        const articleContentDiv = document.getElementById("article-content");
+        articleContentDiv.innerHTML = `
+                <h2>${article.title}</h2>
+                <img src="${article.img}" alt="SEO" class="w-100 border-r-img-blog">
+                <p>${article.text}</p>
+                <p>تاریخ: ${article.time}</p>
+            `;
+      } else {
+        document.getElementById("article-content").innerHTML =
+          "<p>مقاله‌ای پیدا نشد.</p>";
+      }
+    </script>
+  </body>
+</html>
