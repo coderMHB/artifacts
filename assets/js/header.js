@@ -35,6 +35,7 @@ const offcanvasNavbarElem = document.querySelector("#offcanvasNavbar");
 loginBoxBtn.addEventListener("click", () => {
   modalElemLogin.style.display = "block";
   modalElemSearch.style.display = "none";
+  document.querySelector(".offcanvas-backdrop").classList.remove("show");
   offcanvasNavbarElem.classList.remove("show");
 });
 XElemLogin.addEventListener("click", () => {
@@ -44,6 +45,7 @@ XElemLogin.addEventListener("click", () => {
 searchBoxBtn.addEventListener("click", () => {
   modalElemSearch.style.display = "block";
   modalElemLogin.style.display = "none";
+  document.querySelector(".offcanvas-backdrop").classList.remove("show");
   offcanvasNavbarElem.classList.remove("show");
 });
 XElemSearch.addEventListener("click", () => {
