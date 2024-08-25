@@ -95,7 +95,7 @@ const articlesContainer = document.getElementById("articles-container");
 
 function showArticlesToUser(item, index) {
   let containerItem = document.createElement("div");
-  containerItem.className = "col-12 col-md-6 col-lg-4 col-xl-3";
+  containerItem.className = "col-12 col-md-6 col-lg-4 col-xl-3 p-1";
 
   let articleDiv = document.createElement("div");
   articleDiv.className = "article";
