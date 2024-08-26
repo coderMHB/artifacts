@@ -95,7 +95,7 @@ const articlesContainer = document.getElementById("articles-container");
 
 function showArticlesToUser(item, index) {
   let containerItem = document.createElement("div");
-  containerItem.className = "col-12 col-md-6 col-lg-4 col-xl-3 p-1";
+  containerItem.className = "col-12 col-md-6 col-lg-4 col-xl-3";
 
   let articleDiv = document.createElement("div");
   articleDiv.className = "article";
@@ -110,7 +110,7 @@ function showArticlesToUser(item, index) {
   titleItem.innerHTML = item.title;
 
   let txtItem = document.createElement("p");
-  txtItem.className = "text-white-50 text-center m-1";
+  txtItem.className = "text-white-50 text-center m-1 p-1";
   txtItem.innerHTML = item.txt;
 
   let newHrElem = document.createElement("hr");
