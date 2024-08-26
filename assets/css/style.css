@@ -408,7 +408,8 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .text-about {
   font-size: 20px;
-  line-height: 270%;
+  line-height: 220%;
+  color: white !important;
   text-align: justify;
 }
 
