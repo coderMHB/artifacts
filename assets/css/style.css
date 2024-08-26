@@ -36,6 +36,10 @@ body {
   /* height: 200vh; */
 }
 
+.border-custom {
+  border-bottom: 1px solid #44444400; /* خط جداکننده در منوی ناوبری */
+}
+
 .mt-8 {
   margin-top: 80px;
 }
