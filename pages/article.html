@@ -112,7 +112,20 @@
         </button>
         <!-- end btn up -->
 
-        <div id="article-content" class="container-fluid mt-8"></div>
+        <div class="container mt-12">
+            <div class="row">
+                <div class="col-12 col-md-4 d-flex flex-column align-items-center p-4" style="border: 1px solid white;">
+                    <div style="border: 1px solid #505050;" class="w-100 p-3 bodered-article">
+                        <span class="text-white" id="link"></span>
+                        <br>
+                        <button type="button" class="btn btn-dark">کپی لینک</button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-8 d-flex flex-column align-items-center p-4" style="border: 1px solid white;">
+                    asdokaosdkaosdko
+                </div>
+            </div>
+        </div>
 
         <!-- start footer -->
         <footer>
@@ -400,15 +413,35 @@
             if (articleIndex !== null && !isNaN(articleIndex) && articleIndex >= 0 && articleIndex < articlesData.length) {
                 const article = articlesData[articleIndex];
                 const articleContentDiv = document.getElementById("article-content");
-                articleContentDiv.innerHTML = `
-                    <h2 class="brand-name text-center">${article.title}</h2>
-                    <img src="${article.img}" alt="SEO" class="w-100 border-r-img-blog">
-                    <p dir="rtl" class="text-white-50 text-about">${article.text}</p>
-                    <p class="text-center text-white-50">تاریخ: ${article.time}</p>
-                `;
+
+                let titleArticle = document.createElement("h2");
+                titleArticle.innerHTML = article.title;
+                titleArticle.className = "brand-name text-center";
+
+                let imgArticle = document.createElement("img");
+                imgArticle.src = article.img;
+                imgArticle.className = "w-100 border-r-img-blog";
+
+                let paragrafTxt = document.createElement("p");
+                paragrafTxt.className = "text-white-50 text-about";
+                paragrafTxt.dir = "rtl";
+                paragrafTxt.innerHTML = article.text;
+
+                let paraTime = document.createElement("p");
+                paraTime.className = "text-center text-white-50";
+                paraTime.innerHTML =  article.time;
+
+                articleContentDiv.append(titleArticle, imgArticle, paragrafTxt, paraTime);
             } else {
                 document.getElementById("article-content").innerHTML = "<p>مقاله‌ای پیدا نشد.</p>";
             }
+        </script>
+        <script>
+            function updateLink() {
+            const currentUrl = window.location.href;
+            document.getElementById("link").innerText = currentUrl;
+        }
+        window.onload = updateLink;
         </script>
         <script src="../assets/js/bootstrap.js"></script>
         <script src="../assets/js/base.js"></script>

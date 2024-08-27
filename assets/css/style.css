@@ -769,6 +769,13 @@ path {
   }
 }
 /* end header background */
+
+/* begin article */
+.bodered-article{
+  border-radius: 20px;
+}
+/* end article */
+
 /* ___________________________end index______________________________ */
 
 /* _________________scrollbar_____________________ */
