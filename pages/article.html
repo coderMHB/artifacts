@@ -112,13 +112,16 @@
         </button>
         <!-- end btn up -->
 
+
+
+
         <div class="container mt-12">
             <div class="row">
                 <div class="col-12 col-md-4 d-flex flex-column align-items-center p-4" style="border: 1px solid white;">
                     <div style="border: 1px solid #505050;" class="w-100 p-3 bodered-article">
-                        <span class="text-white" id="link"></span>
+                        <span class="text-white" id="myText"></span>
                         <br>
-                        <button type="button" class="btn btn-dark">کپی لینک</button>
+                        <button type="button" class="btn btn-dark" id="copyButton">کپی لینک</button>
                     </div>
                 </div>
                 <div class="col-12 col-md-8 d-flex flex-column align-items-center p-4" style="border: 1px solid white;">
@@ -126,6 +129,8 @@
                 </div>
             </div>
         </div>
+
+
 
         <!-- start footer -->
         <footer>
@@ -492,9 +497,21 @@ Web3 می‌خواد همه چیزو غیرمتمرکز کنه و قدرت رو 
         <script>
             function updateLink() {
             const currentUrl = window.location.href;
-            document.getElementById("link").innerText = currentUrl;
+            document.getElementById("myText").innerText = currentUrl;
         }
         window.onload = updateLink;
+
+        document.getElementById("copyButton").onclick = function() {
+        // المان مورد نظر را پیدا کنید
+        var textToCopy = document.getElementById("myText").innerText;
+
+        // استفاده از Clipboard API برای کپی کردن متن
+        navigator.clipboard.writeText(textToCopy).then(function() {
+            alert("متن کپی شد: " + textToCopy);
+        }, function(err) {
+            console.error('خطا در کپی کردن متن: ', err);
+        });
+    };
         </script>
         <script src="../assets/js/bootstrap.js"></script>
         <script src="../assets/js/base.js"></script>
