@@ -724,7 +724,7 @@ path {
     rgba(255, 0, 0, 0.02) !important;
   border: none;
 }
-.btn-web-vip{
+.btn-web-vip {
   background: linear-gradient(180deg, rgb(0 0 0 / 0%) 17.71%, #9533ad 100%),
     rgba(255, 0, 0, 0.02) !important;
   border: none;
@@ -786,6 +786,17 @@ path {
 /* begin article */
 .bodered-article {
   border-radius: 20px;
+}
+
+.btns-article {
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 17.71%,
+      rgba(255, 255, 255, 0.12) 100%
+    ),
+    rgba(255, 255, 255, 0.01);
+  border: none;
+  outline: none;
 }
 /* end article */
 

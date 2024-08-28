@@ -117,13 +117,20 @@
 
         <div class="container mt-12">
             <div class="row" dir="rtl">
-                <div class="col-12 col-md-8 d-flex flex-column align-items-center p-4" style="border: 1px solid white;">
-                    asdokaosdkaosdko
+                <div class="col-12 col-md-8 d-flex flex-column align-items-center p-4" style="border: 1px solid #ffffff14; border-radius: 10px; background-color: #29292918;">
+                    <p style="text-align: justify;color: #aaaaaa;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolores autem suscipit, temporibus neque reiciendis vel nulla ab, consectetur earum ullam odio eius. Eaque, officiis neque repellat repudiandae doloribus natus!</p>
                 </div>
-                <div class="col-12 col-md-4 d-flex flex-column align-items-center p-4" style="border: 1px solid white;">
-                    <div style="border: 1px solid #505050;" class="w-100 p-3 bodered-article">
-                        <span class="text-white fs-6" id="myText"></span>
-                        <button type="button" class="btn btn-dark mt-3" id="copyButton">کپی لینک</button>
+                <div class="col-12 col-md-4 d-flex flex-column align-items-center p-4 pt-0" >
+                    <div style="border: 1px solid #ffffff14; background-color: #29292918;" class="w-100 m-2 p-3 bodered-article d-flex flex-column align-items-start">
+                        <div class="w-100 pb-3" style="border-bottom: 2px dashed #727272;">
+                            <h5 class="brand-name m-1 mb-2">نویسنده:جواد کرمی</h5>
+                        </div>
+                        <button type="button" class="btn btns-article btn-dark mt-3">کپی لینک</button>
+                    </div>
+                    <div style="border: 1px solid #ffffff14; background-color: #29292918;" class="w-100 m-2 p-3 bodered-article d-flex flex-column align-items-start">
+                        <h5 class="m-1 mb-3 brand-name">اشتراک گذاری مطلب</h5>
+                        <span class="text-white-50 fs-7" id="myText"></span>
+                        <button type="button" class="btn btns-article btn-dark mt-3" id="copyButton">کپی لینک</button>
                     </div>
                 </div>
             </div>
@@ -506,7 +513,6 @@ Web3 می‌خواد همه چیزو غیرمتمرکز کنه و قدرت رو 
 
         // استفاده از Clipboard API برای کپی کردن متن
         navigator.clipboard.writeText(textToCopy).then(function() {
-            alert("متن کپی شد: " + textToCopy);
         }, function(err) {
             console.error('خطا در کپی کردن متن: ', err);
         });
