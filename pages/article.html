@@ -116,16 +116,18 @@
 
 
         <div class="container mt-12">
-            <div class="row" dir="rtl">
-                <div class="col-12 col-md-8 d-flex flex-column align-items-center p-4" style="border: 1px solid #ffffff14; border-radius: 10px; background-color: #29292918;">
-                    <p style="text-align: justify;color: #aaaaaa;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolores autem suscipit, temporibus neque reiciendis vel nulla ab, consectetur earum ullam odio eius. Eaque, officiis neque repellat repudiandae doloribus natus!</p>
+            <div class="row p-2" dir="rtl">
+                <div class="col-12 col-md-7 col-lg-8 d-flex flex-column align-items-center p-4" style="border: 1px solid #ffffff14; border-radius: 10px; background-color: #29292918; height: fit-content !important;">
+                    <h2 class="brand-name" id="title-article"></h2>
+                    <img src="" alt="SEO" class="w-100" style="border-radius: 20px;" id="img-article">
+                    <p class="text-white text-about mt-2" id="text-article"></p>
                 </div>
-                <div class="col-12 col-md-4 d-flex flex-column align-items-center p-4 pt-0" >
-                    <div style="border: 1px solid #ffffff14; background-color: #29292918;" class="w-100 m-2 p-3 bodered-article d-flex flex-column align-items-start">
+                <div class="col-12 col-md-5 col-lg-4 d-flex flex-column align-items-center p-0 p-md-3 pt-md-0 pt-0" >
+                    <div style="border: 1px solid #ffffff14; background-color: #29292918;" class="w-100 m-2 mt-3 mt-md-0 p-3 bodered-article d-flex flex-column align-items-start">
                         <div class="w-100 pb-3" style="border-bottom: 2px dashed #727272;">
                             <h5 class="brand-name m-1 mb-2">نویسنده:جواد کرمی</h5>
                         </div>
-                        <button type="button" class="btn btns-article btn-dark mt-3">کپی لینک</button>
+                        <button type="button" class="btn btns-article btn-dark mt-3">اطلاعات بیشتر</button>
                     </div>
                     <div style="border: 1px solid #ffffff14; background-color: #29292918;" class="w-100 m-2 p-3 bodered-article d-flex flex-column align-items-start">
                         <h5 class="m-1 mb-3 brand-name">اشتراک گذاری مطلب</h5>
@@ -478,18 +480,11 @@ Web3 می‌خواد همه چیزو غیرمتمرکز کنه و قدرت رو 
                 const article = articlesData[articleIndex];
                 const articleContentDiv = document.getElementById("article-content");
 
-                let titleArticle = document.createElement("h2");
-                titleArticle.innerHTML = article.title;
-                titleArticle.className = "brand-name text-center";
+                document.getElementById("title-article").innerHTML = article.title;
 
-                let imgArticle = document.createElement("img");
-                imgArticle.src = article.img;
-                imgArticle.className = "w-100 border-r-img-blog";
+                document.getElementById("img-article").src = article.img;
 
-                let paragrafTxt = document.createElement("p");
-                paragrafTxt.className = "text-white-50 text-about";
-                paragrafTxt.dir = "rtl";
-                paragrafTxt.innerHTML = article.text;
+                document.getElementById("text-article").innerHTML = article.text;
 
                 let paraTime = document.createElement("p");
                 paraTime.className = "text-center text-white-50";
