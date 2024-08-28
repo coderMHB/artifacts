@@ -676,6 +676,14 @@ path {
   display: flex;
   align-items: center;
 }
+.parent-icon-title-web-article-vip {
+  padding: 0px 9px 0px 9px;
+  background-color: #9933ad;
+  box-shadow: 0 0 #0000, 0 0 #0000, -4px 6px 24px 0px #a933ad;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
 .parent-icon-title-server-article {
   padding: 0px 9px 0px 9px;
   background-color: #146da5;
@@ -713,6 +721,11 @@ path {
 }
 .btn-web {
   background: linear-gradient(180deg, rgb(0 0 0 / 0%) 17.71%, #33ad57 100%),
+    rgba(255, 0, 0, 0.02) !important;
+  border: none;
+}
+.btn-web-vip{
+  background: linear-gradient(180deg, rgb(0 0 0 / 0%) 17.71%, #9533ad 100%),
     rgba(255, 0, 0, 0.02) !important;
   border: none;
 }
@@ -771,7 +784,7 @@ path {
 /* end header background */
 
 /* begin article */
-.bodered-article{
+.bodered-article {
   border-radius: 20px;
 }
 /* end article */
