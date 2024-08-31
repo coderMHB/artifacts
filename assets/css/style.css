@@ -99,7 +99,6 @@ body {
 }
 
 #offcanvasNavbar > div.offcanvas-header > button {
-  padding-right: 150%;
   color: white;
 }
 
@@ -148,6 +147,9 @@ button.btn.X:active {
   }
 }
 
+#offcanvasNavbar{
+  width: 92%;
+}
 /* End: header */
 /* ______________Begin modal____________ */
 
