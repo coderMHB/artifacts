@@ -2,11 +2,12 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
+    <base href="../">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../assets/css/bootstrap.rtl.min.css">
-    <link rel="stylesheet" href="../assets/css/fontiran.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="./assets/css/fontiran.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Artifacts | article</title>
 </head>
 <body>
@@ -14,7 +15,7 @@
     <div class="vertical-centered-box" style="transition: 0.5s" id="loader">
         <div class="content">
             <div class="loader-circle d-flex justify-content-center align-items-center">
-                <img src="../assets/img/20240626_030231 (1).png" style="width: 120px;filter: contrast(0)" alt="SEO" />
+                <img src="./assets/img/20240626_030231 (1).png" style="width: 120px;filter: contrast(0)" alt="SEO" />
             </div>
             <div class="loader-line-mask">
                 <div class="loader-line"></div>
@@ -24,87 +25,139 @@
     <!-- end loader -->
 
     <div id="cotainer-all-elements" style="display: none; transition: 2s;">
-        <nav class="navbar navbar-expand-md fixed-top d-flex align-items-center" dir="rtl" id="navbar">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">
-                    <img src="../assets/img/20240626_030231 (1).png" alt="SEO" class="logo-header" />
-                    <span class="brand-name">آرتیفکس</span>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                    <i class="fa-solid fa-bars" style="color: #dedede"></i>
-                </button>
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header">
-                        <a href="#">
-                            <img src="../assets/img/20240626_030231 (1).png" alt="SEO" class="logo-header" />
-                        </a>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-                    </div>
-                    <div class="offcanvas-body black-bg">
-                        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 text-white">
-                            <div class="border-custom">
-                                <li class="nav-item">
-                                    <a class="nav-link active text-white" aria-current="page" href="index.html">خانه</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./pages/sign in.html">ثبت نام</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./pages/about us.html">درباره ما</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./pages/weblog.html">وبلاگ</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./pages/resume.html">رزومه</a>
-                                </li>
-                            </div>
-                        </ul>
-                        <div class="icons d-flex flex-row">
-                            <div class="box-icon" id="searchBtn">
-                                <i class="fa-solid fa-magnifying-glass pointer-event" style="color: #dedede"></i>
-                            </div>
-                            <div class="box-icon" id="loginBtn">
-                                <i class="fa-regular fa-user" style="color: #dedede"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <nav
+        class="navbar navbar-expand-md fixed-top d-flex align-items-center"
+        dir="rtl"
+        id="navbar"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"
+            ><img
+              src="./assets/img/20240626_030231 (1).png"
+              alt="SEO"
+              class="logo-header"
+            />
+            <span class="brand-name">آرتیفکس</span></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <i class="fa-solid fa-bars" style="color: #dedede"></i>
+            <!-- <span class="navbar-toggler-icon"></span> -->
+          </button>
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <a href="#">
+                <img
+                  src="./assets/img/20240626_030231 (1).png"
+                  alt="SEO"
+                  class="logo-header"
+                />
+              </a>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+              ></button>
             </div>
-        </nav>
+            <div class="offcanvas-body black-bg">
+              <ul
+                class="navbar-nav justify-content-center flex-grow-1 pe-3 text-white"
+              >
+                <div class="border-custom">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active text-white"
+                      aria-current="page"
+                      href="index.html"
+                      >خانه</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/sign in.html">ثبت نام</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/about us.html">درباره ما</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/weblog.html">وبلاگ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/resume.html">رزومه</a>
+                  </li>
+                </div>
+              </ul>
+              <div class="icons d-flex flex-row">
+                <div class="box-icon" id="searchBtn">
+                  <i
+                    class="fa-solid fa-magnifying-glass pointer-event"
+                    style="color: #dedede"
+                  ></i>
+                </div>
+                <div class="box-icon" id="loginBtn">
+                  <i class="fa-regular fa-user" style="color: #dedede"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
 
-        <!-- modals -->
-        <!-- login box -->
-        <div class="my-modal-parent-login">
-            <div class="my-modal bg-black">
-                <span class="X" id="X-login">&times;</span>
-                <span class="text-center">حساب کاربری</span>
-                <hr style="color: #eee" />
-                <div class="d-flex flex-row justify-content-center w-100">
-                    <button class="btn btn-outline-success w-50 m-1" type="button">
-                        <a href="./pages/login.html" class="text-white text-decoration-none">ورود</a>
-                    </button>
-                    <button class="btn btn-outline-primary w-50 m-1" type="button">
-                        <a href="./pages/sign in.html" class="text-white text-decoration-none">ثبت نام</a>
-                    </button>
-                </div>
-            </div>
+      <!-- modals -->
+      <!-- login box -->
+      <div class="my-modal-parent-login">
+        <div class="my-modal bg-black">
+          <span class="X" id="X-login">&times;</span>
+          <span class="text-center">حساب کاربری</span>
+          <hr style="color: #eee" />
+          <div class="d-flex flex-row justify-content-center w-100">
+            <button class="btn btn-outline-success w-50 m-1" type="button">
+              <a href="./pages/login.html" class="text-white text-decoration-none"
+                >ورود</a
+              >
+            </button>
+            <button class="btn btn-outline-primary w-50 m-1" type="button">
+              <a href="./pages/sign in.html" class="text-white text-decoration-none"
+                >ثبت نام</a
+              >
+            </button>
+          </div>
         </div>
-        <!-- search box -->
-        <div class="my-modal-parent-search">
-            <div class="my-modal">
-                <form dir="rtl">
-                    <div class="form-group text-center">
-                        <label for="my-input">جستجو</label>
-                        <input id="my-input" class="form-control" type="text" placeholder="جستجو کنید..." />
-                    </div>
-                    <br />
-                    <button class="btn btn-success w-100" type="submit" id="searchBtn">جستجو</button>
-                </form>
-                <span class="X" id="X-search">&times;</span>
+      </div>
+      <!-- search box -->
+      <div class="my-modal-parent-search">
+        <div class="my-modal">
+          <form dir="rtl">
+            <div class="form-group text-center">
+              <label for="my-input">جستجو</label>
+              <input
+                id="my-input"
+                class="form-control"
+                type="text"
+                name=""
+                placeholder="جستجو کنید..."
+              />
             </div>
+            <br />
+            <button class="btn btn-success w-100" type="submit" id="searchBtn">
+              جستجو
+            </button>
+          </form>
+          <span class="X" id="X-search">&times;</span>
         </div>
-        <!-- end modal -->
+      </div>
+      <!-- end modal -->
+
 
         <!-- start btn up -->
         <button class="btn btn-dark btn-up fixed-bottom d-flex justify-content-center align-items-center" type="button">
@@ -145,9 +198,9 @@
             <div class="container-fluid footer-card mt-4 bottom-0">
                 <div class="row">
                     <div class="col-12 col-md-3 text-center border-right">
-                        <img src="../assets/img/enamad.png" alt="SEO" />
-                        <img src="../assets/img/zarin_pal.png" alt="SEO" />
-                        <img src="../assets/img/samandehi.png" alt="SEO" />
+                        <img src="./assets/img/enamad.png" alt="SEO" />
+                        <img src="./assets/img/zarin_pal.png" alt="SEO" />
+                        <img src="./assets/img/samandehi.png" alt="SEO" />
                     </div>
                     <div class="col-12 col-md-3 text-center border-right">
                         <button type="button" class="mb-2 mt-2 btn-footer">آموزشگاه <i class="fa-solid fa-chevron-down"></i></button>
@@ -237,7 +290,7 @@
       موسسه آموزشی آرتیفکتس همیشه در تلاشه تا شما رو با جدیدترین تکنولوژی‌ها و مهارت‌ها آشنا کنه. پس با ما همراه باشید تا با هم به دنیای آینده سفر کنیم و از امکانات بی‌نظیر هوش مصنوعی بهره‌مند بشیم. 🚀
 
       منتظرتون هستیم! 🌟`,
-          img: "../assets/img/AI.jpg",
+          img: "./assets/img/AI.jpg",
           time: "1399/10/06",
         },
         {
@@ -266,7 +319,7 @@
 در نهایت، بلاک‌چین یه تکنولوژی انقلابی و پرکاربرده که می‌تونه دنیای ما رو تغییر بده. موسسه آرتیفکتس همیشه در تلاشه تا شما رو با جدیدترین و جذاب‌ترین تکنولوژی‌ها آشنا کنه. امیدواریم این مقاله براتون مفید بوده باشه و به درک بهتری از بلاک‌چین رسیده باشید.
 
 تا مقاله بعدی، موفق و پیروز باشید! 🚀✨`,
-          img: "../assets/img/block-chein.jpg",
+          img: "./assets/img/block-chein.jpg",
           time: "1399/10/06",
         },
         {
@@ -333,7 +386,7 @@
 مهم‌ترین چیز اینه که از کاری که می‌کنی لذت ببری و ادامه بدی. موفقیت حتماً به دست میاد، فقط باید پشتکار داشته باشی.
 
 امیدوارم این مقاله بهت کمک کنه تا یه یوتیوبر موفق بشی! 😄📹`,
-          img: "../assets/img/youtube.jpg",
+          img: "./assets/img/youtube.jpg",
           time: "1399/10/06",
         },
         {
@@ -393,84 +446,84 @@ Web3 می‌خواد همه چیزو غیرمتمرکز کنه و قدرت رو 
 
 تو Web3، همه می‌تونن از اینترنت به صورت امن و خصوصی استفاده کنن. مثل اینه که همه بتونن تو خونه‌شون راحت و بدون نگرانی زندگی کنن. 🛏️
 `,
-          img: "../assets/img/web3.jpg",
+          img: "./assets/img/web3.jpg",
           time: "1399/10/06",
         },
         {
           title: "چیست؟ Js5",
           txt: "این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله است",
           text: "این کل متن مقاله است",
-          img: "../assets/img/بارگیری.jpg",
+          img: "./assets/img/بارگیری.jpg",
           time: "1399/10/06",
         },
         {
           title: "چیست؟ Js6",
           txt: "این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله است",
           text: "این کل متن مقاله است",
-          img: "../assets/img/بارگیری.jpg",
+          img: "./assets/img/بارگیری.jpg",
           time: "1399/10/06",
         },
         {
           title: "چیست؟ Js7",
           txt: "این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله است",
           text: "این کل متن مقاله است",
-          img: "../assets/img/بارگیری.jpg",
+          img: "./assets/img/بارگیری.jpg",
           time: "1399/10/06",
         },
         {
           title: "چیست؟ Js8",
           txt: "این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله است",
           text: "این کل متن مقاله است",
-          img: "../assets/img/بارگیری.jpg",
+          img: "./assets/img/بارگیری.jpg",
           time: "1399/10/06",
         },
         {
           title: "چیست؟ Js9",
           txt: "این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله است",
           text: "این کل متن مقاله است",
-          img: "../assets/img/بارگیری.jpg",
+          img: "./assets/img/بارگیری.jpg",
           time: "1399/10/06",
         },
         {
           title: "چیست؟ Js10",
           txt: "این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله است",
           text: "این کل متن مقاله است",
-          img: "../assets/img/بارگیری.jpg",
+          img: "./assets/img/بارگیری.jpg",
           time: "1399/10/06",
         },
         {
           title: "چیست؟ Js11",
           txt: "این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله است",
           text: "این کل متن مقاله است",
-          img: "../assets/img/بارگیری.jpg",
+          img: "./assets/img/بارگیری.jpg",
           time: "1399/10/06",
         },
         {
           title: "چیست؟ Js12",
           txt: "این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله است",
           text: "این کل متن مقاله است",
-          img: "../assets/img/بارگیری.jpg",
+          img: "./assets/img/بارگیری.jpg",
           time: "1399/10/06",
         },
         {
           title: "چیست؟ Js13",
           txt: "این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله است",
           text: "این کل متن مقاله است",
-          img: "../assets/img/بارگیری.jpg",
+          img: "./assets/img/بارگیری.jpg",
           time: "1399/10/06",
         },
         {
           title: "چیست؟ Js14",
           txt: "این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله است",
           text: "این کل متن مقاله است",
-          img: "../assets/img/بارگیری.jpg",
+          img: "./assets/img/بارگیری.jpg",
           time: "1399/10/06",
         },
         {
           title: "چیست؟ Js15",
           txt: "این یک توضیح برای مقاله نوشته شده می باشد و چند خط از کل مقاله است",
           text: "این کل متن مقاله است",
-          img: "../assets/img/بارگیری.jpg",
+          img: "./assets/img/بارگیری.jpg",
           time: "1399/10/06",
         },
       ];
@@ -513,12 +566,12 @@ Web3 می‌خواد همه چیزو غیرمتمرکز کنه و قدرت رو 
         });
     };
         </script>
-        <script src="../assets/js/bootstrap.js"></script>
-        <script src="../assets/js/base.js"></script>
-        <script src="../assets/js/btn up.js"></script>
-        <script src="../assets/js/footer.js"></script>
-        <script src="../assets/js/header.js"></script>
-        <script src="../assets/js/loader.js"></script>
+        <script src="./assets/js/bootstrap.js"></script>
+        <script src="./assets/js/base.js"></script>
+        <script src="./assets/js/btn up.js"></script>
+        <script src="./assets/js/footer.js"></script>
+        <script src="./assets/js/header.js"></script>
+        <script src="./assets/js/loader.js"></script>
         <script src="https://kit.fontawesome.com/9a5100e7b6.js" crossorigin="anonymous"></script>
     </body>
 </html>
