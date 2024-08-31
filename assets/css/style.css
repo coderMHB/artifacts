@@ -611,7 +611,7 @@ path {
   box-shadow: 0px 0px 12px 0px #ff073a;
 }
 .neon-green {
-  background-color: #33ad57;
+  background-image: linear-gradient(to bottom right, #4cffa1, #9933ad);
   box-shadow: 0px 0px 12px 0px #4cffa1;
 }
 .neon-blue {
@@ -814,3 +814,27 @@ path {
   background-color: #000000;
 }
 /* ______________________________________ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
