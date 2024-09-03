@@ -5,6 +5,8 @@
     <base href="../">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/img/icon.png" type="image/x-icon">
+    <link rel="icon" href="./assets/img/icon.png" type="image/png"> 
     <link rel="stylesheet" href="./assets/css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="./assets/css/fontiran.css">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -182,9 +184,15 @@
                         </div>
                         <button type="button" class="btn btns-article btn-dark mt-3">اطلاعات بیشتر</button>
                     </div>
+                    <div style="border: 1px solid #ffffff14; background-color: #29292918;" class="w-100 m-2 mt-3 mt-md-0 p-3 bodered-article d-flex flex-column align-items-start">
+                      <h5 class="m-1 mb-3 brand-name">خلاصه مطلب:</h5>
+                      <p id="txt-little" class="text-white-50"></p>
+                    </div>
                     <div style="border: 1px solid #ffffff14; background-color: #29292918;" class="w-100 m-2 p-3 bodered-article d-flex flex-column align-items-start">
                         <h5 class="m-1 mb-3 brand-name">اشتراک گذاری مطلب</h5>
-                        <p class="text-white-50 fs-7 d-flex flex-wrap flex-column" id="myText"></p>
+                        <div class="w-100" style=" border: 2px solid #ffffff14;border-radius: 26px;padding: 0px 5px;">
+                          <pre class="text-white-50 w-100 fs-7 d-flex flex-wrap flex-column p-2 pb-0 mb-1" style="font-size: 12px;" id="myText"></pre>
+                        </div>
                         <button type="button" class="btn btns-article btn-dark mt-3" id="copyButton">کپی لینک</button>
                     </div>
                 </div>
@@ -538,6 +546,8 @@ Web3 می‌خواد همه چیزو غیرمتمرکز کنه و قدرت رو 
                 document.getElementById("img-article").src = article.img;
 
                 document.getElementById("text-article").innerHTML = article.text;
+
+                document.getElementById("txt-little").innerHTML = article.txt;
 
                 let paraTime = document.createElement("p");
                 paraTime.className = "text-center text-white-50";

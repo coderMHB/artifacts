@@ -812,6 +812,7 @@ path {
 /* _________________scrollbar_____________________ */
 ::-webkit-scrollbar {
   width: 5px;
+  height: 2px;
 }
 ::-webkit-scrollbar-thumb {
   background-color: #8b8b8b68;
