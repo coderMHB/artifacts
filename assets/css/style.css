@@ -650,7 +650,7 @@ path {
   width: 100%;
   background: radial-gradient(#000000ac, #00000019),
     linear-gradient(to bottom, #00000000 80%, #000000),
-    url(../img/Picsart_24-07-05_13-10-02-055.png);
+    url(../img/4kVq6HUQHQ-bgHeader.webp);
   background-repeat: no-repeat;
   background-size: cover !important;
   display: flex;
@@ -766,6 +766,11 @@ path {
   }
   .fc-logo-name {
     font-size: 20px !important;
+  }
+  .header-bg{
+    background: radial-gradient(#000000ac, #00000019),
+    linear-gradient(to bottom, #00000000 80%, #000000),
+    url(../img/mobile-bg-little.jpg);
   }
 }
 @media (max-width: 330px) {
