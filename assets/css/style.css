@@ -111,6 +111,7 @@ body {
   font-size: 38px;
 }
 
+
 #offcanvasNavbar > div.offcanvas-header > button {
   color: white;
 }
@@ -157,6 +158,11 @@ button.btn.X:active {
   }
   .nav-item:hover {
     border: none;
+  }
+}
+@media (max-width: 500px) {
+  .title-header-index{
+    font-size: 27px;
   }
 }
 
