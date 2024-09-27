@@ -24,7 +24,7 @@ version: 1.1.0
 }
 
 body {
-  background-color: #050505;
+  background-color: #141414;
   overflow-x: hidden !important;
   transition: 2s;
   transition-property: display;
@@ -42,6 +42,12 @@ body {
 
 .mt-8 {
   margin-top: 80px;
+}
+.pt-8{
+  padding-top: 130px;
+}
+.pb-8{
+  padding-bottom: 100px;
 }
 
 .show,
@@ -96,6 +102,13 @@ body {
   color: white;
   font-family: moraba;
   margin-right: -10px;
+}
+
+.title-header-index{
+  font-family: moraba;
+  color: white;
+  text-align: center;
+  font-size: 38px;
 }
 
 #offcanvasNavbar > div.offcanvas-header > button {
@@ -816,14 +829,25 @@ path {
   width: 5px;
   height: 2px;
 }
+
 ::-webkit-scrollbar-thumb {
-  background-color: #8b8b8b68;
+  background-color: rgba(139, 139, 139, 0.4);
   border-radius: 2px;
 }
+
 ::-webkit-scrollbar-track {
   background-color: #000000;
 }
-/* ______________________________________ */
+
+/* نوار پیمایش برای فایرفاکس */
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(139, 139, 139, 0.4) #000000; /* رنگ نوار و پس‌زمینه */
+  -moz-appearance: none; /* حذف استایل پیش‌فرض */
+}
+
+/* برای تمام عناصر، این کلاس را اضافه کن */
+
 
 
 

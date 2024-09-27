@@ -11,15 +11,6 @@ document.addEventListener("scroll", () => {
   }
 });
 
-// target of All a
-const linksElem = document.querySelectorAll("a");
-
-linksElem.forEach((link) => {
-  if (!link.classList.contains("no-new-tab")) {
-    link.setAttribute("target", "_blank");
-  }
-});
-
 // show modals
 const loginBoxBtn = document.querySelector("#loginBtn");
 const modalElemLogin = document.querySelector(".my-modal-parent-login");
