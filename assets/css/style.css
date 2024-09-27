@@ -158,16 +158,18 @@ button.btn.X:active {
   height: 30vh;
   top: 60%;
   left: 50%;
-  width: 60%;
+  width: 40%;
   display: none;
+  z-index: 1;
 }
 .my-modal-parent-search {
   position: fixed;
   height: 30vh;
   top: 60%;
   left: 50%;
-  width: 60%;
+  width: 40%;
   display: none;
+  z-index: 1;
 }
 .my-modal {
   background-color: black !important;
